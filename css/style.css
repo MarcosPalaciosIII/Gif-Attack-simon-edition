@@ -1,0 +1,103 @@
+h1 {
+  text-align: center;
+  font-size: 65px;
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.purple {
+  color: purple;
+}
+
+.simon-atk {
+background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
+text-align: center;
+background-size: cover;
+}
+
+.simon-atk h1 {
+  margin: 0;
+  font-size: 8rem;
+  text-transform: uppercase;
+  line-height: 1.9;
+  color: #fff;
+  background-color: green;
+  mix-blend-mode: multiply;
+  background: radial-gradient(red, yellow, green, blue, purple);
+}
+
+.body-img {
+  background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;
+  /*background-image: url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif");*/
+  height: 650px;
+  background-size: auto;
+  background-position: center;
+  background-repeat: space;
+}
+
+.btn-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: space-around;
+  padding-top: 400px;
+}
+
+.btn-display a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+
+.info-img {
+  background-color: #000;
+  background-image: url("https://media.giphy.com/media/6zUpdQU2FHi36/giphy.gif");
+  height: 950px;
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: round;
+}
+
+.info-btn-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.info-btn-display a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.how-to {
+  font-size: 30px;
+  color: #ff0;
+  font-family: Comic Sans MS;
+  list-style: none;
+}
+ .game-img {
+   background-image: url("https://media.giphy.com/media/10Qc2DXgafdnsk/giphy.gif");
+   background-size: cover;
+   height: 100%;
+   background-repeat: no-repeat;
+ }

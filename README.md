@@ -1,1 +1,1 @@
-# the-gmae
+# the-game

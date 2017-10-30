@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Start Page </title>
+
+	<!-- Bootstrap first, then your style.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <link href="./css/game.css" rel="stylesheet">
+
+
+  </head>
+  <body class="game-img" id="main-page">
+
+    <div class="simon-atk">
+      <h1> SIMON ATTACK </h1>
+    </div>
+
+
+    <div class="simon-board">
+      <div class="red-circle">
+        <button class="red" data-tile="1"></button>
+      </div>
+      <div class="blue-circle">
+        <button class="blue" data-tile="2"></button>
+      </div>
+      <div class="yellow-circle">
+        <button class="yellow" data-tile="3"></button>
+      </div>
+      <div class="green-circle">
+        <button class="green" data-tile="4"></button>
+      </div>
+      <div class="purple-circle">
+        <button class="purple" data-tile="5"></button>
+      </div>
+    </div>
+
+    <footer>
+      <p id="score">
+        Current Score: 0
+      </p>
+    </footer>
+
+    <div class="btn-display">
+      <button class="btn-danger btn-lg"><a href="./index.html"> Main Menu </a></button>
+      <button class="btn-info btn-lg"><a href="./info.html"> How to Play </a></button>
+    </div>
+	<!-- JQuery first, then Bootstrap, then your script -->
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script src="./js/game.js"></script>
+
+
+  </body>
+</html>
