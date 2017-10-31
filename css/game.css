@@ -24,57 +24,43 @@
   font-size: 20px;
 }
 
+/*.main-btns {
+  display: flex;
+  justify-content: flex-start;
+}*/
+
+.game-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
 .blue {
   color: blue;
   background: blue;
-  clip: rect(0px, 300px, 150px, 150px);
-  width: 296px;
-  margin: 4px;
-  width: 100px;
-  height: 100px;
-  list-style: none;
-  border-radius: 48px;
 }
 
 .red {
   color: red;
   background: red;
-  clip: rect(0px, 300px, 150px, 150px);
-  width: 296px;
-  margin: 4px;
-  width: 100px;
-  height: 100px;
-  list-style: none;
-  border-radius: 48px;
 }
 
 .green {
   color: green;
   background: green;
-  clip: rect(0px, 300px, 150px, 150px);
-  width: 296px;
-  margin: 4px;
-  width: 100px;
-  height: 100px;
-  list-style: none;
-  border-radius: 48px;
 }
 
 .yellow {
-  color: yellow;
-  background: yellow;
-  clip: rect(0px, 300px, 150px, 150px);
-  width: 296px;
-  margin: 4px;
-  width: 100px;
-  height: 100px;
-  list-style: none;
-  border-radius: 48px;
+  color: gold;
+  background: gold;
 }
 
 .purple {
   color: purple;
   background: purple;
+}
+
+.tiles {
   clip: rect(0px, 300px, 150px, 150px);
   width: 296px;
   margin: 4px;
@@ -132,6 +118,7 @@
   position: absolute;
   top: 15px;
   left: 345px;
+
 }
 
 .blue-circle {
@@ -158,7 +145,27 @@
   left: 425px;
 }
 
-#score {
+.current-level {
   color: white;
   font-size: 20px;
+  position: absolute;
+  top: 75px;
+  left: 10px;
+}
+
+.win {
+  color: #f95902;
+  font-size: 65px;
+  text-align: center;
+}
+
+.lose {
+  color: #d8d852;
+  font-size: 65px;
+  text-align: center;
+}
+
+.brighten {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(211, 211, 211, 0.4)) !important;
+  background-blend-mode: screen !important;
 }
