@@ -165,6 +165,12 @@
   text-align: center;
 }
 
+.user-turn {
+  color: #9f7b17;
+  font-size: 45px;
+  text-align: center;
+}
+
 .brighten {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(211, 211, 211, 0.4)) !important;
   background-blend-mode: screen !important;

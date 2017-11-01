@@ -14,13 +14,10 @@ var sequenceCopy;
 var gameSequence = [];
 
 var colors = ['red', 'blue', 'yellow', 'green', 'purple'];
-var speed = 600;
+var speed = 1000;
 var win;
 var lose;
 
-var gameReset = function () {
-  userInput = [];
-};
 
 var audio1 = new Audio(
   './sounds/chime1.wav');
@@ -41,19 +38,19 @@ $('.tiles').on('mousedown', function() {
 
 function beep(audio) {
   switch (audio) {
-    case 'audio1':
+    case 'audio0':
       audio1.play();
       break;
-    case 'audio2':
+    case 'audio1':
       audio2.play();
       break;
-    case 'audio3':
+    case 'audio2':
       audio3.play();
       break;
-    case 'audio4':
+    case 'audio3':
       audio4.play();
       break;
-    case 'audio5':
+    case 'audio4':
       audio5.play();
       break;
     case 'audioBuzzer':
@@ -66,21 +63,33 @@ function getColor(num) {
   /* Generate a random number between 0 and 4
   Red: 0   Blue: 1   Yellow: 2   Green: 3
   Purple: 4 */
-  return [Math.floor(Math.random() * num)];
+  return Math.floor(Math.random() * 5);
 }
 
 function NewRound() {
   // Adds new random color and sends the sequence to be animated
-  var color = getColor(5);
-  gameSequence.push(color);
-  sequenceCopy = Array.from(gameSequence);
+
+  setTimeout(function() {
+    $(".user-turn").addClass("hidden");
+  },
+  600
+  );
+
+  for (var i = 0; i < 1; i++) {
+    var color = getColor();
+    gameSequence.push(color);
+  }
+  // console.log("userInput before empty: " + userInput);
+  // sequenceCopy = Array.from(gameSequence);
   userInput = [];
 
-  if (level >= 4) speed = 400;
-  if (level >= 8) speed = 200;
-  if (level >= 12) speed = 100;
+    // console.log("userInput after empty: " + userInput);
 
-  animate();
+  if (level >= 4) speed = 800;
+  if (level >= 8) speed = 600;
+  if (level >= 12) speed = 300;
+
+  animate(playerMove);
   level += 1;
   updateLevel();
 }
@@ -89,7 +98,7 @@ function updateLevel() {
   $('.current-level').text("Level: " + level);
 }
 
-function animate() {
+function animate(callback) {
   var i = 0;
   var interval = setInterval(function() {
     console.log(gameSequence[i]);
@@ -98,52 +107,59 @@ function animate() {
     i++;
     if (i >= gameSequence.length) {
       clearInterval(interval);
+      callback();
     }
   },
   speed);
 }
 
-function LightUp(tile) {
+function LightUp(tileNumber) {
+  var audio = 'audio' + tileNumber;
+  beep(audio);
+  // console.log("power" + tileNumber);
 
-  tile.forEach(function(color, index){
-    var audio = 'audio' + color;
-    beep(audio);
-    console.log("power" + color);
-    var $tile = $("[data-tile ='+ index + ']");
+  var html = "[data-tile = " + tileNumber +"]";
 
-    // var $tile = document.querySele.ctorAll('.tiles');
+  console.log(html);
+  var $tile = $(html);
 
-    console.log($tile);
+  // console.log("This is $tile:",$tile);
 
 
-    $tile.addClass('brighten');
+  $tile.addClass('brighten');
 
-    window.setTimeout(function() {
-      $tile.removeClass('brighten');
-    },
-    speed / 2);
+  window.setTimeout(function() {
+    $tile.removeClass('brighten');
+  },
+  speed / 2);
 
-  });
 }
 
-
 function gameOver() {
+  // game over function
   if (win == true) {
     $('.win').removeClass('hidden');
   } else {
     $('.lose').removeClass('hidden');
   }
+
 }
 
 function resetGame() {
+  // reset game function
   $('#start-btn').removeClass('brighten');
   $('#start-btn').removeClass('hidden');
   $('#reset-btn').addClass('hidden');
+  if (win == true) {
+    $('.win').addClass('hidden');
+  } else {
+    $('.lose').addClass('hidden');
+  }
   gameSequence = [];
   userInput = [];
   level = 0;
   updateLevel();
-  speed = 600;
+  speed = 1000;
 }
 
 function startOption() {
@@ -152,7 +168,7 @@ function startOption() {
     $('#start-btn').addClass('brighten');
     if ($('#start-btn').hasClass('brighten')) {
       $('#reset-btn').removeClass('hidden');
-      // $('#start-btn').addClass('hidden');
+      $('#start-btn').addClass('hidden');
 
       NewRound();
     } else {
@@ -164,42 +180,60 @@ function startOption() {
 }
 
 
-function playerMove() {
+function playerMove(event) {
+  //player move fnction
+    console.log("player move");
 
-    var position = $(this).data('tile');
-    userInput.push(position);
+    setTimeout(function() {
+      $(".user-turn").removeClass("hidden");
+    },
+    600
+    );
 
-    if (userInput[userInput.length - 1] !== gameSequence[userInput.length - 1]) {
-      beep('audioBuzzer');
+    console.log('the game sequence: ' + gameSequence);
 
-    } else {
-      var audio = 'audio' + $(this).data('tile');
-      beep(audio);
+    $(".tiles").on('click', function() {
+      var position = $(this).data("tile");
+      userInput.push(position);
 
-      var exp = gameSequence.length === userInput.length;
-      if (exp) {
+      if (userInput.length === gameSequence.length) {
+        $(".user-turn").addClass("hidden");
+      }
 
-        if (level === 20) {
-          win = true;
-          gameOver();
-        } else {
-          NewRound();
+      console.log(userInput);
+
+
+      if (userInput[userInput.length - 1] !== gameSequence[userInput.length - 1]) {
+        beep('audioBuzzer');
+
+        gameOver();
+
+      } else {
+        var audio = 'audio' + $(this).data('tile');
+        beep(audio);
+
+        var exp = gameSequence.length === userInput.length;
+        if (exp) {
+
+          if (level === 15) {
+            win = true;
+            gameOver();
+          } else {
+            NewRound();
+          }
         }
       }
-    }
-}
+    });
+  }
 
 $(document).ready(function () {
   $('#reset-btn').click(function() {
     resetGame();
     console.log('reset');
   });
-});
 
-$(document).ready(function () {
-  $('#start-btn').click(function () {
+  $('#start-btn').click(function (event) {
     startOption();
-    console.log('start');
+
   });
-  playerMove();
 });
