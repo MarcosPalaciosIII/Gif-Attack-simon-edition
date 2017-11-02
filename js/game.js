@@ -60,7 +60,8 @@ var winGif = [
     'https://media.giphy.com/media/FBYKU4iWLo7mw/giphy.gif',
     'https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif',
     'https://media.giphy.com/media/tdHYaCkmFtY4M/giphy.gif',
-    'https://media.giphy.com/media/pkW0cgpEvDmb6/giphy.gif'
+    'https://media.giphy.com/media/pkW0cgpEvDmb6/giphy.gif',
+    'https://media.giphy.com/media/5GUp79EEUZ6wg/giphy.gif'
   ];
 
   var loseGif = [
@@ -295,7 +296,7 @@ function playerMove(event) {
         var exp = gameSequence.length === userInput.length;
         if (exp) {
 
-          if (level === 27) {
+          if (level === 10) {
             win = true;
             gameOver();
           } else {
