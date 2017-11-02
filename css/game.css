@@ -10,7 +10,6 @@
   margin: 0;
   font-size: 4rem;
   text-transform: uppercase;
-  line-height: 1.9;
   color: #fff;
   background-color: green;
   mix-blend-mode: multiply;
@@ -24,16 +23,35 @@
   font-size: 20px;
 }
 
-/*.main-btns {
-  display: flex;
-  justify-content: flex-start;
-}*/
-
 .game-btns {
+  position: absolute;
+  top: -7px;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 294px;
+  line-height: 4;
 }
+
+.start-btn, .reset-btn {
+  border-radius: 50%;
+  width: 97%;
+  height: 3em;
+}
+
+.start-stop {
+  position: absolute;
+  top: 40em;
+  left: 48em;
+}
+
+.nav-btn {
+  width: 140px;
+  height: 38px;
+  text-align: center;
+  font-size: medium;
+}
+
 
 .blue {
   color: blue;
@@ -62,30 +80,17 @@
 
 .tiles {
   clip: rect(0px, 300px, 150px, 150px);
-  width: 296px;
   margin: 4px;
-  width: 100px;
-  height: 100px;
+  width: 84px;
+  height: 84px;
   list-style: none;
   border-radius: 48px;
 }
 
-/*.simon {
-    background: #fff;
-    position: relative;
-    margin-right: 3em;
-    width: 302px;
-    height: 295px;
-    border-radius: 150px 150px 150px 150px;
-    -o-box-shadow: 2px 1px 12px #aaa;
-    box-shadow: 2px 1px 12px #aaa;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}*/
-
 .simon-board {
-  position: relative;
+  position: absolute;
+  top: 28em;
+  left: 24em;
   height: 375px;
   width: 55%;
   margin: 0 auto;
@@ -94,7 +99,7 @@
 
 }
 
-.blue .red .green .yellow .purple {
+.blue, .red, .green, .yellow, .purple {
   height: 290px;
   border-radius: 150px 150px 150px 150px;
   position: absolute;
@@ -147,7 +152,7 @@
 
 .current-level {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
   top: 75px;
   left: 10px;
@@ -155,23 +160,57 @@
 
 .win {
   color: #f95902;
-  font-size: 65px;
-  text-align: center;
 }
 
 .lose {
   color: #d8d852;
-  font-size: 65px;
-  text-align: center;
+}
+
+.ready {
+  color: #2c9c2f;
+}
+
+.fight {
+  color: #ff0000;
 }
 
 .user-turn {
   color: #9f7b17;
-  font-size: 45px;
+}
+
+.ai-turn {
+  color: #9f7b17;
+}
+
+.incoming {
+  color: #9f7b17;
+}
+
+h2 {
   text-align: center;
+  margin: 5px;
+}
+
+.win .lose .ready .fight {
+  font-size: 35px;
+
+}
+
+.user-turn .ai-turn .incoming {
+  font-size: 25px;
 }
 
 .brighten {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(211, 211, 211, 0.4)) !important;
   background-blend-mode: screen !important;
+}
+
+.gameGif {
+  height: 270px;
+  width: 330px;
+}
+
+.gif-div {
+  display: flex;
+  justify-content: center;
 }

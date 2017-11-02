@@ -33,31 +33,28 @@ background-size: cover;
 
 .simon-atk h1 {
   margin: 0;
-  font-size: 8rem;
+  font-size: 11rem;
   text-transform: uppercase;
-  line-height: 1.9;
-  color: #fff;
-  background-color: green;
   mix-blend-mode: multiply;
   background: radial-gradient(red, yellow, green, blue, purple);
 }
 
 .body-img {
-  background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;
-  /*background-image: url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif");*/
-  height: 650px;
-  background-size: auto;
+  /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
+  background-image: url("../images/simon.jpg");
+  height: 850px;
+  background-size: cover;
   background-position: center;
-  background-repeat: space;
+  background-repeat: no-repeat;
 }
 
 .btn-display {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   align-content: space-around;
-  padding-top: 400px;
+  padding-top: 165px;
 }
 
 .btn-display a {
@@ -100,4 +97,9 @@ background-size: cover;
    background-size: cover;
    height: 100%;
    background-repeat: no-repeat;
+ }
+
+ .navi-btns {
+   width: 195px;
+   margin: 35px;
  }

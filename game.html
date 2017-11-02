@@ -20,9 +20,19 @@
       <h1> SIMON ATTACK </h1>
     </div>
 
-    <h2 class="win hidden"> WINNER! </h2>
-    <h2 class="lose hidden"> YOU LOSE! </h2>
-    <h2 class="user-turn hidden"> Player Turn </h2>
+    <div class="gif-div">
+      <img class="gameGif" src="https://media.giphy.com/media/b4R0bZrNCwYzm/giphy.gif">
+    </div>
+
+    <div>
+      <h2 class="win hidden"> WINNER! </h2>
+      <h2 class="lose hidden"> YOU LOSE! </h2>
+      <h2 class ="ready"> Ready </h2>
+      <h2 class="fight hidden"> FIGHT! </h2>
+      <h2 class="user-turn hidden"> Player Turn </h2>
+      <h2 class="ai-turn hidden"> AI Turn </h2>
+      <h2 class="incoming"> Press Start to Begin </h2>
+    </div>
 
     <div class="simon-board">
       <div class="red-circle">
@@ -51,13 +61,13 @@
     <div class="game-btns">
 
       <div class="btn-display">
-        <button class="btn-danger btn-lg"><a href="./index.html"> Main Menu </a></button>
-        <button class="btn-info btn-lg"><a href="./info.html"> How to Play </a></button>
+        <a href="./index.html" class="btn btn-lg nav-btn"> Main Menu </a>
+        <a href="./info.html" class="btn btn-lg nav-btn"> How to Play </a>
       </div>
 
-      <div class="btn-display">
-        <button class="btn-success btn-lg" id="start-btn"><a href="#"> Start Game </a></button>
-        <button class="btn-warning btn-lg hidden" id="reset-btn"><a href="#"> Reset Game </a></button>
+      <div class="start-stop">
+        <a href="#" class="btn btn-success btn-lg start-btn"> Start Game </a>
+        <a href="#" class="btn btn-warning btn-lg hidden reset-btn"> Reset Game </a>
       </div>
 
     </div>
