@@ -296,7 +296,7 @@ function playerMove(event) {
         var exp = gameSequence.length === userInput.length;
         if (exp) {
 
-          if (level === 10) {
+          if (level === 27) {
             win = true;
             gameOver();
           } else {
