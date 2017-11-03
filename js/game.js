@@ -37,7 +37,12 @@ var winGif = [
   'https://media.giphy.com/media/wgbwUb8P8beak/giphy.gif',
   'https://media.giphy.com/media/11At2NcE4qXz4Q/giphy.gif',
   'https://media.giphy.com/media/UttZVMEzceMOQ/giphy.gif',
-  'https://media.giphy.com/media/B41qnm0DEUqUE/giphy.gif'
+  'https://media.giphy.com/media/B41qnm0DEUqUE/giphy.gif',
+  'https://media.giphy.com/media/K3RxMSrERT8iI/giphy.gif',
+  'https://media.giphy.com/media/mPrciphuLZsmQ/giphy.gif',
+  'https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif',
+  'https://media.giphy.com/media/Zn7rsVqBTPAly/giphy.gif',
+  'https://media.giphy.com/media/xbkMY5GeLGZG0/giphy.gif'
 ];
 
 
@@ -67,7 +72,18 @@ var winGif = [
     'https://media.giphy.com/media/xFLHQdTt681dm/giphy.gif',
     'https://media.giphy.com/media/l2JdXH0qv2QdobAwE/giphy.gif',
     'https://media.giphy.com/media/2As195WtHg5uo/giphy.gif',
-    'https://media.giphy.com/media/13r36l3Z7YCZDG/giphy.gif'
+    'https://media.giphy.com/media/13r36l3Z7YCZDG/giphy.gif',
+    'https://media.giphy.com/media/3oEduYcStmVqMIbsxG/giphy.gif',
+    'https://media.giphy.com/media/GmFi8MsSCsFYk/giphy.gif',
+    'https://media.giphy.com/media/x7wmh6E0pSvzG/giphy.gif',
+    'https://media.giphy.com/media/m6lFeYJpUevug/giphy.gif',
+    'https://media.giphy.com/media/ok6RHHslBe8xy/giphy.gif',
+    'https://media.giphy.com/media/FWPRKh0htdrQQ/giphy.gif',
+    'https://media.giphy.com/media/QQUEsHquYDjEY/giphy.gif',
+    'https://media.giphy.com/media/uUZxjvsxacL6M/giphy.gif',
+    'https://media.giphy.com/media/DvNwi41Iqrzos/giphy.gif',
+    'https://media.giphy.com/media/FFZBsyqW77Kwg/giphy.gif',
+    'https://media.giphy.com/media/ycxx9ry7NArv2/giphy.gif'
   ];
 
   var loseGif = [
@@ -86,7 +102,15 @@ var winGif = [
     'https://media.giphy.com/media/3xM3vNRTM6mVG/giphy.gif',
     'https://media.giphy.com/media/3o6Zt2ls5l2HrVesBq/giphy.gif',
     'https://media.giphy.com/media/l2JdZEIie6tRGGQy4/giphy.gif',
-    'https://media.giphy.com/media/13FOYj8cuVcbTi/giphy.gif'
+    'https://media.giphy.com/media/13FOYj8cuVcbTi/giphy.gif',
+    'https://media.giphy.com/media/UbQQK3SUZxCQ8/giphy.gif',
+    'https://media.giphy.com/media/13bHdZ52I3A6uk/giphy.gif',
+    'https://media.giphy.com/media/3o84Ughbtrcsp8OAM0/giphy.gif',
+    'https://media.giphy.com/media/lnBuZsAZ1wN3i/giphy.gif',
+    'https://media.giphy.com/media/BmshHM2V8ByjC/giphy.gif',
+    'https://media.giphy.com/media/TseBjMu53JgWc/giphy.gif',
+    'https://media.giphy.com/media/xV9cwjF0Z40LK/giphy.gif',
+    'https://media.giphy.com/media/auxWjSpDJ8544/giphy.gif'
   ];
 
 $(document).ready(function() {
