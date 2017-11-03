@@ -1,6 +1,6 @@
 .game-img {
   background-image: url("https://media.giphy.com/media/10Qc2DXgafdnsk/giphy.gif");
-  background-size: cover;
+  background-position: top center;
   height: 100%;
   background-repeat: no-repeat;
 }
@@ -26,10 +26,6 @@
 .game-btns {
   position: absolute;
   top: -7px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 294px;
   line-height: 4;
 }
 
@@ -87,24 +83,46 @@
   border-radius: 48px;
 }
 
-.simon-board {
-  position: absolute;
-  top: 28em;
-  left: 24em;
-  height: 375px;
-  width: 55%;
-  margin: 0 auto;
-  display: block;
+@media (min-width: 768px) {
+    .simon-board {
+      position: absolute;
+      left: 7em;
+      height: 375px;
+      width: 55%;
+    }
+    .game-img{
+      background-size: 147%;
+    }
 }
 
+@media (min-width: 1024px) {
+    .simon-board {
+      position: absolute;
+      left: 9em;
+      height: 375px;
+      width: 55%;
+    }
+    .game-img{
+      background-size: 141%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .simon-board {
+      position: absolute;
+      left: 24em;
+      height: 375px;
+      width: 55%;
+    }
+    .game-img{
+      background-size: 100%;
+    }
 }
 
 .blue, .red, .green, .yellow, .purple {
-  height: 290px;
   border-radius: 150px 150px 150px 150px;
-  position: absolute;
-  text-indent: 10000px;
 }
+
 
 .simon {
   display: flex;
