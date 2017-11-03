@@ -18,9 +18,9 @@ var lose;
 
 
 var audio1 = new Audio(
-  './sounds/chime1.wav');
+  './sounds/chime1.mp3');
 var audio2 = new Audio(
-  './sounds/chime2.wav');
+  './sounds/chime2.mp3');
 var audio3 = new Audio(
   './sounds/chime3.wav');
 var audio4 = new Audio(
@@ -36,7 +36,8 @@ var winGif = [
   'https://media.giphy.com/media/hZj44bR9FVI3K/giphy.gif',
   'https://media.giphy.com/media/wgbwUb8P8beak/giphy.gif',
   'https://media.giphy.com/media/11At2NcE4qXz4Q/giphy.gif',
-  'https://media.giphy.com/media/UttZVMEzceMOQ/giphy.gif'
+  'https://media.giphy.com/media/UttZVMEzceMOQ/giphy.gif',
+  'https://media.giphy.com/media/B41qnm0DEUqUE/giphy.gif'
 ];
 
 
@@ -61,7 +62,12 @@ var winGif = [
     'https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif',
     'https://media.giphy.com/media/tdHYaCkmFtY4M/giphy.gif',
     'https://media.giphy.com/media/pkW0cgpEvDmb6/giphy.gif',
-    'https://media.giphy.com/media/5GUp79EEUZ6wg/giphy.gif'
+    'https://media.giphy.com/media/5GUp79EEUZ6wg/giphy.gif',
+    'https://media.giphy.com/media/PAXXsQ7rPah68/giphy.gif',
+    'https://media.giphy.com/media/xFLHQdTt681dm/giphy.gif',
+    'https://media.giphy.com/media/l2JdXH0qv2QdobAwE/giphy.gif',
+    'https://media.giphy.com/media/2As195WtHg5uo/giphy.gif',
+    'https://media.giphy.com/media/13r36l3Z7YCZDG/giphy.gif'
   ];
 
   var loseGif = [
@@ -74,7 +80,13 @@ var winGif = [
     'https://media.giphy.com/media/XUVMNSuI7uI7u/giphy.gif',
     'https://media.giphy.com/media/l3PWa5KL8nY4M/giphy.gif',
     'https://media.giphy.com/media/S2PT8LVG8gMMw/giphy.gif',
-    'https://media.giphy.com/media/O3N85I35pVU52/giphy.gif'
+    'https://media.giphy.com/media/O3N85I35pVU52/giphy.gif',
+    'https://media.giphy.com/media/3ohuAxV0DfcLTxVh6w/giphy.gif',
+    'https://media.giphy.com/media/iueKR0ye2AMiA/giphy.gif',
+    'https://media.giphy.com/media/3xM3vNRTM6mVG/giphy.gif',
+    'https://media.giphy.com/media/3o6Zt2ls5l2HrVesBq/giphy.gif',
+    'https://media.giphy.com/media/l2JdZEIie6tRGGQy4/giphy.gif',
+    'https://media.giphy.com/media/13FOYj8cuVcbTi/giphy.gif'
   ];
 
 $('.tiles').on('mousedown', function() {
