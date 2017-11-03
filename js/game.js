@@ -170,9 +170,9 @@ function NewRound() {
 
   userInput = [];
 
-  if (level >= 4) speed = 800;
-  if (level >= 8) speed = 600;
-  if (level >= 12) speed = 300;
+  if (level >= 2) speed = 800;
+  if (level >= 4) speed = 600;
+  if (level >= 6) speed = 300;
   if (level >= 19) speed = 200;
   if (level >= 25) speed = 100;
 
@@ -322,7 +322,7 @@ $(".tiles").on('click', function() {
       var exp = gameSequence.length === userInput.length;
       if (exp) {
 
-        if (level === 27) {
+        if (level === 8) {
           win = true;
           gameOver();
         } else {
