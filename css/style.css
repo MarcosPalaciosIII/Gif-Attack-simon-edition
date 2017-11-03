@@ -145,3 +145,10 @@ h1 {
  span {
    font-size: 40px;
  }
+
+.info-btn {
+  color: #fff;
+  background-image: linear-gradient(to bottom,#3110E2 0,#3110E2 100%);
+  background-repeat: repeat-x;
+  border-color: #3110E2;
+}
