@@ -89,10 +89,14 @@ var winGif = [
     'https://media.giphy.com/media/13FOYj8cuVcbTi/giphy.gif'
   ];
 
-$('.tiles').on('mousedown', function() {
-    $(this).addClass('brighten');
-}).on('mouseup', function() {
-    $(this).removeClass('brighten');
+$(document).ready(function() {
+  console.log('working');
+    $('.tiles').on('mousedown', function() {
+      console.log('mousedownw');
+        $(this).addClass('brighten');
+    }).on('mouseup', function() {
+        $(this).removeClass('brighten');
+    });
 });
 
 function beep(audio) {
@@ -129,13 +133,11 @@ function NewRound() {
   // Adds new random color and sends the sequence to be animated
   $('.gameGif').attr('src', combatGif[Math.floor(Math.random() * combatGif.length)]);
 
-  setTimeout(function() {
+
     $(".user-turn").addClass("hidden");
     $(".ai-turn").removeClass("hidden");
     $(".fight").removeClass("hidden");
-  },
-  300
-  );
+
 
   for (var i = 0; i < 1; i++) {
     var color = getColor();
@@ -228,12 +230,9 @@ function resetGame() {
     $('.lose').addClass('hidden');
   }
 
-  setTimeout(function() {
     $(".ready").removeClass("hidden");
     $(".incoming").removeClass("hidden");
-  },
-  300
-  );
+
 
   if (win == true) {
     $('.win').addClass('hidden');
@@ -258,12 +257,9 @@ function startOption() {
     if ($('.start-btn').hasClass('brighten')) {
       $('.reset-btn').removeClass('hidden');
       $('.start-btn').addClass('hidden');
-      setTimeout(function() {
+
         $(".ready").addClass("hidden");
         $(".incoming").addClass("hidden");
-      },
-      300
-      );
 
 
       NewRound();
@@ -276,47 +272,48 @@ function startOption() {
 }
 
 
+$(".tiles").on('click', function() {
+  if (!$('.user-turn').hasClass('hidden')) {
+    var position = $(this).data("tile");
+
+    userInput.push(position);
+    console.log(userInput);
+
+    if (userInput.length === gameSequence.length) {
+      $(".user-turn").addClass("hidden");
+    }
+
+    if (userInput[userInput.length - 1] !== gameSequence[userInput.length - 1]) {
+      beep('audioBuzzer');
+
+      if (!$('.user-turn').hasClass('hidden')) {
+        $('.user-turn').addClass('hidden');
+      }
+      gameOver();
+
+    } else {
+      var audio = 'audio' + $(this).data('tile');
+      beep(audio);
+
+      var exp = gameSequence.length === userInput.length;
+      if (exp) {
+
+        if (level === 27) {
+          win = true;
+          gameOver();
+        } else {
+          NewRound();
+        }
+      }
+    }
+  }
+});
+
 function playerMove(event) {
   //player move fnction
-    setTimeout(function() {
       $(".user-turn").removeClass("hidden");
       $(".ai-turn").addClass("hidden");
-    },
-    300
-    );
 
-    $(".tiles").unbind().on('click', function() {
-      var position = $(this).data("tile");
-      userInput.push(position);
-
-      if (userInput.length === gameSequence.length) {
-        $(".user-turn").addClass("hidden");
-      }
-
-      if (userInput[userInput.length - 1] !== gameSequence[userInput.length - 1]) {
-        beep('audioBuzzer');
-
-        if (!$('.user-turn').hasClass('hidden')) {
-          $('.user-turn').addClass('hidden');
-        }
-        gameOver();
-
-      } else {
-        var audio = 'audio' + $(this).data('tile');
-        beep(audio);
-
-        var exp = gameSequence.length === userInput.length;
-        if (exp) {
-
-          if (level === 27) {
-            win = true;
-            gameOver();
-          } else {
-            NewRound();
-          }
-        }
-      }
-    });
   }
 
 $(document).ready(function () {
