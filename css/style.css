@@ -25,11 +25,65 @@ h1 {
   color: purple;
 }
 
-.simon-atk {
-background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
-text-align: center;
-background-size: cover;
+@media (min-width: 768px) {
+  .body-img {
+    /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
+    background-image: url("../images/simon.jpg");
+    height: 850px;
+    background-size: 157%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .simon-atk {
+    background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
+    text-align: center;
+    background-size: 151%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 }
+
+@media (min-width: 1024px) {
+  .body-img {
+    /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
+    background-image: url("../images/simon.jpg");
+    height: 850px;
+    background-size: 150%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .simon-atk {
+    background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
+    text-align: center;
+    background-size: 143%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1440px) {
+  .body-img {
+    /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
+    background-image: url("../images/simon.jpg");
+    height: 850px;
+    background-size: 107%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .simon-atk {
+    background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
+    text-align: center;
+    background-size: 103%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
 
 .simon-atk h1 {
   margin: 0;
@@ -37,15 +91,6 @@ background-size: cover;
   text-transform: uppercase;
   mix-blend-mode: multiply;
   background: radial-gradient(red, yellow, green, blue, purple);
-}
-
-.body-img {
-  /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
-  background-image: url("../images/simon.jpg");
-  height: 850px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .btn-display {
@@ -63,26 +108,19 @@ background-size: cover;
   font-size: 30px;
 }
 
-.info-img {
-  background-color: #000;
-  background-image: url("https://media.giphy.com/media/6zUpdQU2FHi36/giphy.gif");
-  height: 950px;
-  background-size: auto;
-  background-position: bottom;
-  background-repeat: round;
-}
 
 .info-btn-display {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 10px;
+  height: 9em;
 }
 
 .info-btn-display a {
-  width: 8em;
+  width: 7em;
   font-size: 25px;
+  margin: 20px;
 }
 
 .how-to {
@@ -94,6 +132,7 @@ background-size: cover;
  .game-img {
    background-image: url("https://media.giphy.com/media/10Qc2DXgafdnsk/giphy.gif");
    background-size: cover;
+   background-position: center top;
    height: 100%;
    background-repeat: no-repeat;
  }
