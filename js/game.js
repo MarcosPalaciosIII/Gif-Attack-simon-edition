@@ -25,7 +25,7 @@ var audio3 = new Audio(
   './sounds/chime3.wav');
 var audio4 = new Audio(
   './sounds/chime4.wav');
-var audio5 = new Audio('./sounds/chime5.wav');
+var audio5 = new Audio('./sounds/chime5.flac');
 var audioBuzzer = new Audio('./sounds/buzzer.mp3');
 
 var winGif = [
