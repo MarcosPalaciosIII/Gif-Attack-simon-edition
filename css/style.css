@@ -30,7 +30,7 @@ h1 {
     /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
     background-image: url("../images/simon.jpg");
     height: 850px;
-    background-size: 157%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -38,9 +38,10 @@ h1 {
   .simon-atk {
     background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
     text-align: center;
-    background-size: 151%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-color: black;
   }
 }
 
@@ -49,7 +50,7 @@ h1 {
     /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
     background-image: url("../images/simon.jpg");
     height: 850px;
-    background-size: 150%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -57,9 +58,10 @@ h1 {
   .simon-atk {
     background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
     text-align: center;
-    background-size: 143%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-color: black;
   }
 }
 
@@ -68,7 +70,7 @@ h1 {
     /*background: #0f0f0f url("https://media.giphy.com/media/thVVNTXoaPRRe/giphy.gif") space;*/
     background-image: url("../images/simon.jpg");
     height: 850px;
-    background-size: 107%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -76,9 +78,10 @@ h1 {
   .simon-atk {
     background-image: url("https://media.giphy.com/media/MlqCajCg5xaeI/giphy.gif");
     text-align: center;
-    background-size: 103%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-color: black;
   }
 }
 
