@@ -107,7 +107,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
     .simon-board {
       position: relative;
       left: 24em;
