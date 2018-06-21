@@ -85,7 +85,7 @@
 
 @media (min-width: 768px) {
     .simon-board {
-      position: absolute;
+      position: relative;
       left: 7em;
       height: 375px;
       width: 55%;
@@ -97,7 +97,7 @@
 
 @media (min-width: 1024px) {
     .simon-board {
-      position: absolute;
+      position: relative;
       left: 9em;
       height: 375px;
       width: 55%;
@@ -109,7 +109,7 @@
 
 @media (min-width: 1440px) {
     .simon-board {
-      position: absolute;
+      position: relative;
       left: 24em;
       height: 375px;
       width: 55%;
